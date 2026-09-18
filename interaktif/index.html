@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7657d6">
+  <title>GEMA • Media Interaktif & Game Edukatif</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero" id="beranda">
+    <div class="hero-image"></div>
+    <div class="hero-shade"></div>
+    <nav class="nav container">
+      <a class="brand" href="#beranda"><img src="images/logo-guruupgradeid.png" alt="Logo Guru Upgrade ID"><span>GEMA</span></a>
+      <div style="display:flex;gap:14px;align-items:center"><a class="nav-link" href="../index.html">Beranda GEMA</a><a class="nav-link" href="#panduan">Panduan</a></div>
+    </nav>
+    <div class="container hero-content">
+      <span class="eyebrow">AI • HTML ALL-IN-ONE • RESPONSIVE</span>
+      <h1>GENERATOR PROMPT<br><span>MPI • GAME • LAB MAYA</span></h1>
+      <p class="lead">Isi kebutuhan pembelajaran, pilih jenis media, game, atau lab maya, lalu dapatkan prompt final siap ditempel ke Canva AI Kode, Gemini Canvas, Chat.Z.AI, Codex, atau AI coding lainnya.</p>
+      <p class="tagline">Belajar • Berbagi • Berkarya • Menginspirasi</p>
+      <div class="hero-actions"><a class="btn primary" href="#generator">Mulai Generate Prompt</a><a class="btn glass" href="#panduan">Lihat Panduan</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice-section" id="panduan">
+      <div class="container">
+        <div class="notice"><div class="notice-icon">⚡</div><div><strong>Generator ini langsung membuat prompt final untuk kode.</strong><p>Output prompt meminta AI membuat <b>satu file HTML lengkap</b> berisi HTML + CSS + JavaScript yang langsung dapat dijalankan di browser.</p></div></div>
+        <div class="steps">
+          <article><b>01</b><h3>Pilih Jenis</h3><p>MPI, Game Interaktif, atau Lab Maya.</p></article>
+          <article><b>02</b><h3>Isi Kebutuhan</h3><p>Mapel, kelas, materi, TP, fitur dan desain.</p></article>
+          <article><b>03</b><h3>Generate</h3><p>Dapatkan prompt HTML all-in-one.</p></article>
+          <article><b>04</b><h3>Copy ke AI</h3><p>Tempel ke AI coding pilihan Anda.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="generator-section" id="generator">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow dark">PILIH GENERATOR</span><h2>Apa yang ingin Anda buat?</h2><p>Form akan menyesuaikan otomatis dengan jenis produk.</p></div>
+        <div class="mode-grid">
+          <button class="mode-card active" type="button" data-mode="mpi"><span class="mode-icon">🖥️</span><span><strong>Media Pembelajaran Interaktif</strong><small>Materi, eksplorasi, presentasi, aktivitas, kuis dan navigasi interaktif.</small></span><i>✓</i></button>
+          <button class="mode-card" type="button" data-mode="game"><span class="mode-icon">🎮</span><span><strong>Game Edukatif Interaktif</strong><small>Quiz game, matching, memory, adventure, escape room dan lainnya.</small></span><i>✓</i></button>
+          <button class="mode-card" type="button" data-mode="lab"><span class="mode-icon">🧪</span><span><strong>Lab Maya / Virtual Lab</strong><small>Eksperimen virtual, manipulasi variabel, observasi data, grafik, analisis dan refleksi.</small></span><i>✓</i></button>
+        </div>
+
+        <form id="promptForm" class="form-shell">
+          <div class="form-main">
+            <section class="form-block">
+              <div class="block-title"><span>1</span><div><h3>Data Pembelajaran</h3><p>Informasi wajib agar konten sesuai konteks kelas.</p></div></div>
+              <div class="fields">
+                <label>Mata Pelajaran *<input name="mapel" required placeholder="Contoh: PAI dan Budi Pekerti"></label>
+                <label>Kelas *<select name="kelas" required><option value="">Pilih kelas</option><option>Kelas I</option><option>Kelas II</option><option>Kelas III</option><option>Kelas IV</option><option>Kelas V</option><option>Kelas VI</option><option>Kelas VII</option><option>Kelas VIII</option><option>Kelas IX</option><option>Kelas X</option><option>Kelas XI</option><option>Kelas XII</option></select></label>
+                <label>Fase<select name="fase"><option>Tidak digunakan</option><option>Fase A</option><option>Fase B</option><option>Fase C</option><option>Fase D</option><option>Fase E</option><option>Fase F</option></select></label>
+                <label class="span2">Materi / Topik *<input name="materi" required placeholder="Contoh: Ekosistem dan rantai makanan"></label>
+                <label class="span2">Tujuan Pembelajaran *<textarea name="tp" required rows="4" placeholder="Tuliskan tujuan pembelajaran yang ingin dicapai..."></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-block mpi-only">
+              <div class="block-title"><span>2</span><div><h3>Jenis Media Interaktif</h3><p>Pilih format utama dan interaksi yang ingin tersedia.</p></div></div>
+              <div class="fields">
+                <label>Format Media<select name="mpiType"><option>Microsite Materi Interaktif</option><option>Presentasi Interaktif</option><option>Eksplorasi Materi Bertahap</option><option>Kuis Formatif Interaktif</option><option>Flashcard Interaktif</option><option>Simulasi Konsep Sederhana</option><option>Learning Path / Misi Belajar</option><option>Latihan Drag & Drop</option><option>Matching Activity</option><option>Media Campuran All-in-One</option></select></label>
+                <label>Jumlah Bagian / Scene<select name="mpiScenes"><option>4 bagian</option><option selected>5 bagian</option><option>6 bagian</option><option>8 bagian</option><option>Otomatis sesuai materi</option></select></label>
+              </div>
+              <p class="mini-label">Interaksi yang diinginkan</p>
+              <div class="chips" data-check-group="mpiFeatures">
+                <label><input type="checkbox" value="Navigasi tab" checked><span>Navigasi Tab</span></label><label><input type="checkbox" value="Accordion materi"><span>Accordion</span></label><label><input type="checkbox" value="Popup / modal informasi"><span>Popup</span></label><label><input type="checkbox" value="Kuis pilihan ganda" checked><span>Kuis</span></label><label><input type="checkbox" value="Drag and drop"><span>Drag & Drop</span></label><label><input type="checkbox" value="Matching"><span>Matching</span></label><label><input type="checkbox" value="Flashcard flip"><span>Flip Card</span></label><label><input type="checkbox" value="Progress belajar" checked><span>Progress</span></label><label><input type="checkbox" value="Feedback langsung" checked><span>Feedback</span></label>
+              </div>
+            </section>
+
+            <section class="form-block lab-only hidden">
+              <div class="block-title"><span>2</span><div><h3>Rancangan Lab Maya</h3><p>Tentukan eksperimen, variabel, data, dan cara murid melakukan investigasi virtual.</p></div></div>
+              <div class="fields">
+                <label>Jenis Lab Maya<select name="labType"><option>Eksperimen Virtual Interaktif</option><option>Simulasi Sains</option><option>Eksplorasi Variabel</option><option>Praktikum Berbasis Data</option><option>Demonstrasi Konsep Interaktif</option><option>Investigasi / Inquiry Lab</option></select></label>
+                <label>Tingkat Simulasi<select name="labComplexity"><option>Sederhana — 1–2 variabel</option><option selected>Menengah — 2–4 variabel</option><option>Lanjut — multi-variabel</option></select></label>
+                <label class="span2">Fenomena / Eksperimen yang Disimulasikan *<textarea name="labExperiment" rows="3" placeholder="Contoh: Pengaruh intensitas cahaya terhadap laju fotosintesis"></textarea></label>
+                <label class="span2">Alat dan Bahan Virtual<textarea name="labTools" rows="3" placeholder="Contoh: sumber cahaya, tanaman air, gelas ukur, stopwatch virtual, sensor gelembung"></textarea></label>
+                <label>Variabel Bebas<input name="independentVar" placeholder="Contoh: intensitas cahaya"></label>
+                <label>Variabel Terikat<input name="dependentVar" placeholder="Contoh: jumlah gelembung per menit"></label>
+                <label class="span2">Variabel Kontrol<textarea name="controlVars" rows="2" placeholder="Contoh: suhu, jenis tanaman, volume air"></textarea></label>
+                <label class="span2">Prosedur / Langkah Praktikum<textarea name="labProcedure" rows="5" placeholder="Tuliskan langkah umum, atau biarkan generator menyusun berdasarkan eksperimen."></textarea></label>
+              </div>
+              <p class="mini-label">Komponen Lab Maya</p>
+              <div class="chips" data-check-group="labFeatures">
+                <label><input type="checkbox" value="Kontrol variabel dengan slider/input" checked><span>Kontrol Variabel</span></label>
+                <label><input type="checkbox" value="Tombol mulai, jeda, reset eksperimen" checked><span>Start / Pause / Reset</span></label>
+                <label><input type="checkbox" value="Tabel data hasil pengamatan" checked><span>Tabel Data</span></label>
+                <label><input type="checkbox" value="Grafik hasil eksperimen" checked><span>Grafik</span></label>
+                <label><input type="checkbox" value="Prediksi sebelum eksperimen"><span>Prediksi</span></label>
+                <label><input type="checkbox" value="Pertanyaan analisis" checked><span>Analisis</span></label>
+                <label><input type="checkbox" value="Kesimpulan dan refleksi" checked><span>Refleksi</span></label>
+                <label><input type="checkbox" value="Petunjuk keselamatan / batasan simulasi" checked><span>Keselamatan</span></label>
+                <label><input type="checkbox" value="Ekspor/unduh data sebagai CSV sederhana"><span>Ekspor Data</span></label>
+              </div>
+              <div class="fields top-gap">
+                <label>Jumlah Percobaan / Skenario<select name="labTrials"><option>1 skenario</option><option selected>3 skenario</option><option>5 skenario</option><option>Otomatis sesuai materi</option></select></label>
+                <label>Output Data Utama<select name="labOutput"><option>Tabel data</option><option selected>Tabel + grafik</option><option>Grafik + interpretasi</option><option>Data observasi kualitatif</option></select></label>
+                <label class="span2">Catatan Keselamatan / Batasan Konsep<textarea name="labSafety" rows="3" placeholder="Contoh: tekankan bahwa simulasi menyederhanakan kondisi nyata; sertakan peringatan jika eksperimen nyata memiliki risiko."></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-block game-only hidden">
+              <div class="block-title"><span>2</span><div><h3>Pilih Jenis Game</h3><p>Mekanik game akan dimasukkan otomatis ke prompt.</p></div></div>
+              <div class="game-grid" id="gameGrid">
+                <label class="game-choice"><input type="radio" name="gameType" value="Quiz Battle" checked><span>🏆<b>Quiz Battle</b><small>Pilih jawaban, skor, combo dan ranking lokal.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Memory Card"><span>🧠<b>Memory Card</b><small>Buka kartu dan cari pasangan yang sesuai.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Matching Game"><span>🔗<b>Matching</b><small>Pasangkan istilah, gambar, definisi atau konsep.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Drag and Drop Challenge"><span>🖐️<b>Drag & Drop</b><small>Seret objek ke kategori atau target yang benar.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Escape Room Edukasi"><span>🔐<b>Escape Room</b><small>Pecahkan petunjuk untuk membuka tahap berikutnya.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Adventure / Mission Game"><span>🗺️<b>Adventure</b><small>Misi dan level berbasis perjalanan belajar.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Treasure Hunt"><span>💎<b>Treasure Hunt</b><small>Cari petunjuk dan kumpulkan reward.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Spin Wheel Quiz"><span>🎡<b>Spin Wheel</b><small>Putar roda untuk menentukan soal/tantangan.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Maze Challenge"><span>🧩<b>Maze Challenge</b><small>Pilih jalur berdasarkan jawaban yang benar.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Tebak Gambar"><span>🖼️<b>Tebak Gambar</b><small>Kenali objek/konsep dari petunjuk visual.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="True or False Challenge"><span>✅<b>True / False</b><small>Keputusan cepat dengan feedback langsung.</small></span></label>
+                <label class="game-choice"><input type="radio" name="gameType" value="Puzzle Edukatif"><span>🧩<b>Puzzle</b><small>Susun urutan, konsep, gambar, atau informasi.</small></span></label>
+              </div>
+              <div class="fields top-gap"><label>Jumlah Level<select name="levels"><option>1 level</option><option>3 level</option><option selected>5 level</option><option>7 level</option><option>Otomatis</option></select></label><label>Jumlah Soal / Tantangan<select name="questions"><option>5</option><option selected>10</option><option>15</option><option>20</option><option>Otomatis sesuai level</option></select></label></div>
+              <p class="mini-label">Fitur game</p>
+              <div class="chips" data-check-group="gameFeatures"><label><input type="checkbox" value="Skor" checked><span>Skor</span></label><label><input type="checkbox" value="Timer"><span>Timer</span></label><label><input type="checkbox" value="3 nyawa"><span>Nyawa</span></label><label><input type="checkbox" value="Progress bar" checked><span>Progress</span></label><label><input type="checkbox" value="Badge / reward" checked><span>Reward</span></label><label><input type="checkbox" value="Combo / streak"><span>Combo</span></label><label><input type="checkbox" value="Feedback benar-salah" checked><span>Feedback</span></label><label><input type="checkbox" value="Layar hasil akhir" checked><span>Hasil Akhir</span></label><label><input type="checkbox" value="Tombol main lagi" checked><span>Main Lagi</span></label></div>
+            </section>
+
+            <section class="form-block">
+              <div class="block-title"><span>3</span><div><h3>Tampilan & Teknis</h3><p>Tentukan karakter visual dan target perangkat.</p></div></div>
+              <div class="fields">
+                <label>Gaya Visual<select name="style"><option>3D Edu-Tech Soft Purple</option><option>Modern Education</option><option>Gamified Futuristic</option><option>Doodle Education</option><option>Colorful Classroom</option><option>Islamic Modern</option><option>Minimalist Clean</option><option>Arcade Neon</option><option>Nature Learning</option></select></label>
+                <label>Target Perangkat<select name="device"><option selected>Responsive: HP, Tablet, dan Laptop</option><option>Prioritas HP / Mobile</option><option>Prioritas Laptop / Desktop</option></select></label>
+                <label>Mode Penggunaan<select name="usage"><option>Individu</option><option>Kelompok</option><option>Presentasi Guru</option><option selected>Fleksibel</option></select></label>
+                <label>Bahasa<select name="language"><option selected>Bahasa Indonesia ramah siswa</option><option>Bahasa Indonesia formal</option><option>Bilingual Indonesia–English</option></select></label>
+                <label class="span2">Catatan Tambahan<textarea name="notes" rows="3" placeholder="Opsional. Contoh: gunakan karakter maskot, hindari suara, gunakan tema luar angkasa..."></textarea></label>
+              </div>
+            </section>
+
+            <button class="generate-btn" type="submit">✨ Generate Prompt HTML All-in-One</button><p class="validation" id="validation" role="alert"></p>
+          </div>
+
+          <aside class="summary"><span class="summary-badge" id="summaryMode">MEDIA INTERAKTIF</span><h3>Prompt Anda</h3><p>Prompt akan meminta AI menghasilkan satu file HTML siap dijalankan.</p><div class="summary-list"><span>✓ HTML + CSS + JavaScript</span><span>✓ Satu file .html</span><span>✓ Responsive</span><span>✓ Touch & mouse friendly</span><span>✓ Tanpa backend</span><span>✓ Fitur benar-benar berfungsi</span></div><div class="ai-targets"><b>Cocok ditempel ke:</b><span>Canva AI Kode</span><span>Gemini Canvas</span><span>Chat.Z.AI</span><span>Codex</span></div></aside>
+        </form>
+
+        <section class="result hidden" id="result"><div class="result-head"><div><span class="eyebrow dark">PROMPT SIAP</span><h2>Copy dan tempel ke AI coding pilihan Anda</h2></div><button type="button" class="copy-btn" id="copyBtn">📋 Salin Prompt</button></div><textarea id="promptOutput" readonly rows="28"></textarea><div class="copy-status" id="copyStatus" aria-live="polite"></div><button type="button" class="edit-btn" id="editBtn">← Edit Pengaturan</button></section>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-wrap"><div class="footer-brand"><img src="images/logo-guruupgradeid.png" alt="Guru Upgrade ID"><div><b>Guru Upgrade ID</b><p>Belajar • Berbagi • Berkarya • Menginspirasi</p></div></div><p>© @guruupgradeid 2026</p></div></footer>
+  <script src="js/script.js"></script>
+
+<a href="../galeri/index.html" title="Galeri Karya GEMA"
+style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#6d4bd1;color:white;text-decoration:none;padding:12px 15px;border-radius:999px;font-family:system-ui,sans-serif;font-weight:800;box-shadow:0 10px 28px rgba(64,44,120,.25)">🖼️ Galeri Karya</a>
+
+</body>
+</html>

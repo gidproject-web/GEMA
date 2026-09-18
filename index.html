@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6d4bd1">
+<title>GEMA — Generator Media dan Aktivitas Edukatif</title>
+<meta name="description" content="GEMA membantu guru mengubah ide pembelajaran menjadi prompt media visual, media interaktif, dan game edukatif.">
+<style>
+:root{--ink:#27233a;--muted:#6e6882;--purple:#6d4bd1;--purple2:#8d6bea;--soft:#f4f0ff;--line:#e7e0f7;--white:#fff;--shadow:0 18px 50px rgba(64,44,120,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fbfaff}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,calc(100% - 32px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900}.brand img{width:44px;height:44px;object-fit:contain}.brand small{display:block;font-weight:600;color:var(--muted)}
+.navbtn{padding:11px 16px;border-radius:14px;background:var(--soft);color:var(--purple);font-weight:800}
+.hero{position:relative;overflow:hidden;padding:74px 0 86px;background:radial-gradient(circle at 78% 25%,#e9dcff 0,transparent 34%),linear-gradient(135deg,#fff 0%,#f5f0ff 55%,#efe8ff 100%)}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:70px solid rgba(109,75,209,.07);right:-170px;bottom:-210px}
+.badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eee7ff;color:var(--purple);font-weight:900;font-size:13px;letter-spacing:.05em}
+h1{font-size:clamp(44px,8vw,84px);line-height:.96;margin:18px 0 12px;letter-spacing:-.055em}h1 span{color:var(--purple)}
+.subtitle{font-size:clamp(18px,2.4vw,28px);font-weight:850;margin:0 0 12px}.quote{font-size:18px;color:var(--muted);font-style:italic;margin:0 0 28px}
+.lead{max-width:760px;font-size:17px;line-height:1.75;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 18px;border-radius:15px;font-weight:900;display:inline-flex;align-items:center;gap:8px}.primary{background:var(--purple);color:white;box-shadow:var(--shadow)}.secondary{background:white;border:1px solid var(--line);color:var(--purple)}
+section{padding:72px 0}.head{text-align:center;max-width:760px;margin:0 auto 34px}.head h2{font-size:clamp(30px,4vw,46px);margin:8px 0}.head p{color:var(--muted);line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(58,39,100,.06);transition:.2s transform,.2s box-shadow}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:58px;height:58px;border-radius:18px;background:var(--soft);display:grid;place-items:center;font-size:28px}.card h3{font-size:22px;margin:18px 0 8px}.card p{color:var(--muted);line-height:1.65;min-height:108px}.card .go{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-weight:900;color:var(--purple)}
+.flow{background:#fff}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border-radius:20px;background:var(--soft)}.step b{font-size:13px;color:var(--purple)}.step h3{margin:10px 0 7px}.step p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+footer{padding:30px 0;border-top:1px solid var(--line);background:white}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;color:var(--muted);font-size:14px}.foot strong{color:var(--ink)}
+@media(max-width:820px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.card p{min-height:0}}
+@media(max-width:520px){nav{height:auto;padding:14px 0}.brand small{display:none}.hero{padding:54px 0 62px}.steps{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<a class="brand" href="index.html"><img src="visual/images/logo-guruupgradeid.png" alt="Logo Guru Upgrade ID"><div>GEMA<small>Generator Media dan Aktivitas Edukatif</small></div></a>
+<div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap"><a class="navbtn" href="galeri/index.html">🖼️ Galeri Karya</a><a class="navbtn" href="#generator">Pilih Generator</a></div>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+<span class="badge">GURU UPGRADE ID • MEDIA PEMBELAJARAN</span>
+<h1><span>GEMA</span></h1>
+<p class="subtitle">Generator Media dan Aktivitas Edukatif</p>
+<p class="quote">Visual • Media Interaktif • Game Edukatif • Lab Maya<br>“Dari Ide Menjadi Media.”</p>
+<p class="lead">Satu website untuk membantu guru menyusun prompt media pembelajaran sesuai kebutuhan kelas. Pilih media visual, media pembelajaran interaktif, game edukatif, atau lab maya; isi konteks pembelajaran; lalu salin prompt hasil generator ke platform yang Anda gunakan.</p>
+<div class="actions"><a class="btn primary" href="#generator">✨ Mulai dari Ide</a><a class="btn secondary" href="galeri/index.html">🖼️ Lihat Galeri Karya</a><a class="btn secondary" href="#cara">Lihat Cara Kerja</a></div>
+</div>
+</section>
+
+<section id="generator">
+<div class="container">
+<div class="head"><span class="badge">4 FITUR • 1 RUANG</span><h2>Apa yang ingin Anda buat?</h2><p>Pilih jalur sesuai kebutuhan. GEMA menyatukan generator visual, media interaktif, game edukatif, dan lab maya dalam satu ruang.</p></div>
+<div class="grid">
+<a class="card" href="visual/index.html"><div class="icon">🎨</div><h3>Visual Edukatif</h3><p>Buat prompt konsep LKM, slide materi, infografis, rangkuman visual, komik, cerita bergambar, poster, flashcard, mind map, dan media visual lainnya.</p><div class="go"><span>Buka Generator Visual</span><span>→</span></div></a>
+<a class="card" href="interaktif/index.html?mode=mpi#generator"><div class="icon">🖥️</div><h3>Media Interaktif</h3><p>Susun prompt final untuk media pembelajaran interaktif HTML all-in-one yang responsif, lengkap dengan materi, navigasi, aktivitas, kuis, dan refleksi.</p><div class="go"><span>Buka Generator MPI</span><span>→</span></div></a>
+<a class="card" href="interaktif/index.html?mode=game#generator"><div class="icon">🎮</div><h3>Game Edukatif</h3><p>Buat prompt game pembelajaran seperti quiz game, matching, memory, adventure, escape room, dan pilihan permainan lain sesuai tujuan pembelajaran.</p><div class="go"><span>Buka Generator Game</span><span>→</span></div></a>
+<a class="card" href="interaktif/index.html?mode=lab#generator"><div class="icon">🧪</div><h3>Lab Maya</h3><p>Buat prompt virtual lab dengan eksperimen interaktif, manipulasi variabel, tabel data, grafik, analisis, refleksi, dan catatan keselamatan.</p><div class="go"><span>Buka Generator Lab Maya</span><span>→</span></div></a>
+</div>
+</div>
+</section>
+
+
+<section style="padding:28px 0 72px">
+<div class="container">
+<div style="background:linear-gradient(135deg,#6d4bd1,#8d6bea);color:white;border-radius:28px;padding:32px;display:flex;justify-content:space-between;gap:24px;align-items:center;box-shadow:0 18px 50px rgba(64,44,120,.18);flex-wrap:wrap">
+<div style="max-width:700px">
+<div style="font-size:13px;font-weight:900;letter-spacing:.06em;opacity:.85">KOMUNITAS GEMA</div>
+<h2 style="font-size:32px;margin:8px 0 8px">Sudah jadi? Bagikan karya Anda.</h2>
+<p style="margin:0;line-height:1.65;opacity:.9">Publikasikan link hasil dari Canva, Google Drive, website, atau platform lainnya ke Galeri Karya GEMA agar dapat dilihat dan menginspirasi guru lain.</p>
+</div>
+<a href="galeri/index.html" style="background:white;color:#6d4bd1;padding:14px 18px;border-radius:15px;font-weight:900;white-space:nowrap">Buka Galeri Karya →</a>
+</div>
+</div>
+</section>
+
+<section class="flow" id="cara">
+<div class="container">
+<div class="head"><span class="badge">ALUR GEMA</span><h2>Dari ide menjadi media</h2><p>GEMA menjembatani gagasan pembelajaran guru menjadi prompt yang lebih terstruktur dan siap digunakan.</p></div>
+<div class="steps">
+<div class="step"><b>01</b><h3>Pilih Jenis</h3><p>Tentukan Visual, Media Interaktif, Game Edukatif, atau Lab Maya.</p></div>
+<div class="step"><b>02</b><h3>Isi Kebutuhan</h3><p>Masukkan mapel, kelas, materi, tujuan pembelajaran, desain, dan fitur.</p></div>
+<div class="step"><b>03</b><h3>Generate Prompt</h3><p>GEMA menyusun kebutuhan Anda menjadi prompt yang lebih terarah.</p></div>
+<div class="step"><b>04</b><h3>Wujudkan Media</h3><p>Salin prompt ke platform pilihan Anda, tinjau hasil, lalu sesuaikan untuk murid.</p></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container foot"><div><strong>GEMA</strong> — Generator Media dan Aktivitas Edukatif</div><div>Guru Upgrade ID • Belajar • Berbagi • Berkarya • Menginspirasi</div></div></footer>
+</body>
+</html>

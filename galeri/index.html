@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6d4bd1">
+<title>Galeri Karya • GEMA</title>
+<meta name="description" content="Galeri karya hasil pemanfaatan prompt GEMA: visual, media interaktif, game edukatif, dan lab maya.">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">
+      <img src="../visual/images/logo-guruupgradeid.png" alt="Logo Guru Upgrade ID">
+      <div><strong>GEMA</strong><small>Galeri Karya</small></div>
+    </a>
+    <div class="nav-actions">
+      <a class="ghost" href="../index.html">← Beranda</a>
+      <button class="primary" id="openSubmit">＋ Bagikan Karya</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">GALERI KARYA GEMA</span>
+      <h1>Dari Prompt<br><span>Menjadi Karya.</span></h1>
+      <p>Ruang berbagi hasil pemanfaatan GEMA. Publikasikan link karya dari Canva, Google Drive, website, atau platform lainnya dan inspirasi guru lain.</p>
+      <div class="hero-actions">
+        <button class="primary big" id="openSubmitHero">✨ Bagikan Karya Saya</button>
+        <a class="ghost big" href="#karya">Lihat Galeri</a>
+      </div>
+      <div class="status" id="connectionStatus" aria-live="polite"></div>
+    </div>
+    <div class="hero-card">
+      <div class="stack">
+        <div class="mini-card visual"><span>🎨</span><b>Visual Edukatif</b></div>
+        <div class="mini-card mpi"><span>🖥️</span><b>Media Interaktif</b></div>
+        <div class="mini-card game"><span>🎮</span><b>Game Edukatif</b></div>
+        <div class="mini-card lab"><span>🧪</span><b>Lab Maya</b></div>
+      </div>
+      <p>Belajar • Berbagi • Berkarya • Menginspirasi</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="karya">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="badge soft">KARYA KOMUNITAS</span>
+        <h2>Jelajahi karya yang dibagikan</h2>
+        <p>Gunakan pencarian dan filter untuk menemukan inspirasi sesuai kebutuhan.</p>
+      </div>
+      <button class="secondary" id="refreshBtn">↻ Muat Ulang</button>
+    </div>
+
+    <div class="toolbar">
+      <label class="search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Cari judul, pembuat, mapel...">
+      </label>
+      <select id="categoryFilter" aria-label="Filter kategori">
+        <option value="">Semua kategori</option>
+        <option>Visual Edukatif</option>
+        <option>Media Interaktif</option>
+        <option>Game Edukatif</option>
+        <option>Lab Maya</option>
+      </select>
+      <select id="levelFilter" aria-label="Filter jenjang">
+        <option value="">Semua jenjang</option>
+        <option>SD/MI</option>
+        <option>SMP/MTs</option>
+        <option>SMA/MA/SMK</option>
+        <option>Umum</option>
+      </select>
+    </div>
+
+    <div class="stats">
+      <div><strong id="totalWorks">0</strong><span>Karya</span></div>
+      <div><strong id="totalCreators">0</strong><span>Kreator</span></div>
+      <div><strong id="totalSubjects">0</strong><span>Mapel</span></div>
+    </div>
+
+    <div id="galleryGrid" class="grid" aria-live="polite"></div>
+
+    <div class="empty" id="emptyState" hidden>
+      <div>🗂️</div>
+      <h3>Belum ada karya yang cocok</h3>
+      <p>Coba ubah kata kunci/filter, atau jadilah yang pertama membagikan karya.</p>
+      <button class="primary" id="openSubmitEmpty">Bagikan Karya</button>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <div class="section-head compact">
+      <div>
+        <span class="badge soft">CARA BERBAGI</span>
+        <h2>3 langkah sederhana</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <article><b>01</b><h3>Selesaikan karya</h3><p>Gunakan prompt GEMA lalu buat karya pada platform pilihan Anda.</p></article>
+      <article><b>02</b><h3>Aktifkan akses link</h3><p>Pastikan link Google Drive, Canva, website, atau platform lain dapat dilihat publik.</p></article>
+      <article><b>03</b><h3>Kirim ke galeri</h3><p>Isi formulir singkat. Karya akan tampil sebagai inspirasi untuk komunitas.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div><strong>GEMA</strong> — Generator Media dan Aktivitas Edukatif</div>
+    <div>Guru Upgrade ID • Dari Ide Menjadi Media</div>
+  </div>
+</footer>
+
+<!-- Modal submit -->
+<div class="modal" id="submitModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div>
+        <span class="badge soft">BAGIKAN KARYA</span>
+        <h2 id="modalTitle">Masukkan hasil karya Anda</h2>
+      </div>
+      <button class="close" data-close aria-label="Tutup">×</button>
+    </div>
+
+    <form id="workForm">
+      <div class="form-grid">
+        <label class="span2">Judul karya *
+          <input name="title" maxlength="120" required placeholder="Contoh: Game Jejak Islam Nusantara">
+        </label>
+        <label>Nama pembuat *
+          <input name="creator" maxlength="80" required placeholder="Nama guru / tim">
+        </label>
+        <label>Asal sekolah/instansi
+          <input name="institution" maxlength="120" placeholder="Contoh: SMAN 4 Lubuklinggau">
+        </label>
+        <label>Kategori *
+          <select name="category" required>
+            <option value="">Pilih kategori</option>
+            <option>Visual Edukatif</option>
+            <option>Media Interaktif</option>
+            <option>Game Edukatif</option>
+            <option>Lab Maya</option>
+          </select>
+        </label>
+        <label>Jenjang *
+          <select name="level" required>
+            <option value="">Pilih jenjang</option>
+            <option>SD/MI</option>
+            <option>SMP/MTs</option>
+            <option>SMA/MA/SMK</option>
+            <option>Umum</option>
+          </select>
+        </label>
+        <label>Mapel
+          <input name="subject" maxlength="80" placeholder="Contoh: PAI, Biologi, Matematika">
+        </label>
+        <label>Platform
+          <select name="platform">
+            <option>AI Canva</option>
+            <option>Google Drive</option>
+            <option>Website</option>
+            <option>Google Sites</option>
+            <option>Chat.z.ai</option>
+            <option>Gemini Canvas</option>
+            <option>Manus</option>
+            <option>Lainnya</option>
+          </select>
+        </label>
+        <label class="span2">Link karya *
+          <input name="work_url" type="url" required placeholder="https://...">
+          <small>Pastikan pengaturan link dapat dilihat oleh siapa saja yang memiliki tautan.</small>
+        </label>
+        <label class="span2">Link thumbnail/gambar sampul
+          <input name="thumbnail_url" type="url" placeholder="https://... (opsional)">
+          <small>Gunakan URL gambar langsung. Jika kosong, galeri akan memakai ilustrasi kategori.</small>
+        </label>
+        <label class="span2">Deskripsi singkat *
+          <textarea name="description" maxlength="420" rows="4" required placeholder="Ceritakan materi, tujuan, atau keunikan karya..."></textarea>
+        </label>
+      </div>
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Saya memastikan karya/link layak dibagikan dan tidak memuat data pribadi murid yang tidak semestinya dipublikasikan.</span>
+      </label>
+      <div class="form-actions">
+        <button type="button" class="ghost" data-close>Batal</button>
+        <button type="submit" class="primary" id="submitBtn">Publikasikan Karya</button>
+      </div>
+      <p class="form-message" id="formMessage" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
