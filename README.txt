@@ -37,3 +37,28 @@ KEAMANAN DASAR
 - Jika galeri dibuka untuk publik luas, disarankan menambah moderasi/approval dan CAPTCHA.
 
 Buka index.html untuk memulai.
+
+
+PEMBARUAN GEMA v2
+- Form Lab Maya disederhanakan: guru cukup mengisi fenomena/eksperimen dan fokus pengamatan.
+- Detail variabel, alat-bahan, prosedur, data, analisis, refleksi, dan keselamatan dapat disusun otomatis oleh prompt.
+- Pengaturan lanjutan tetap tersedia dan bersifat opsional.
+- Ditambahkan fitur Hasil & Integrasi:
+  1. Hanya tampilkan hasil
+  2. Tampilkan + unduh hasil
+  3. Kirim ringkasan ke WhatsApp
+  4. Simpan ke Google Spreadsheet via Apps Script
+  5. Spreadsheet + WhatsApp
+- Integrasi WhatsApp tidak mengirim otomatis; pengguna tetap menekan tombol Kirim.
+- Integrasi Spreadsheet memerlukan URL Google Apps Script Web App pada media hasil.
+
+
+PEMBARUAN GEMA v3 — KRITIK & SARAN
+- Ditambahkan halaman /kritik-saran/
+- Pengguna dapat memberi rating 1–5, kritik, saran, fitur yang digunakan, dan kontak opsional.
+- Masukan TIDAK ditampilkan ke publik.
+- Untuk menyimpan ke Supabase, jalankan:
+  kritik-saran/supabase-feedback.sql
+  pada SQL Editor project Supabase yang sama dengan Galeri Karya.
+- Halaman Kritik & Saran menggunakan konfigurasi Supabase yang sama dari galeri/config.js.
+- Jika Supabase belum terhubung, form berjalan dalam mode demo lokal di browser.

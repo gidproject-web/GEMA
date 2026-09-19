@@ -72,34 +72,63 @@
             </section>
 
             <section class="form-block lab-only hidden">
-              <div class="block-title"><span>2</span><div><h3>Rancangan Lab Maya</h3><p>Tentukan eksperimen, variabel, data, dan cara murid melakukan investigasi virtual.</p></div></div>
+              <div class="block-title"><span>2</span><div><h3>Lab Maya — Isi Intinya Saja</h3><p>Cukup jelaskan eksperimen yang ingin dibuat. GEMA akan menyusun variabel, alat-bahan, prosedur, data, analisis, dan keselamatan secara otomatis sesuai kelas.</p></div></div>
               <div class="fields">
-                <label>Jenis Lab Maya<select name="labType"><option>Eksperimen Virtual Interaktif</option><option>Simulasi Sains</option><option>Eksplorasi Variabel</option><option>Praktikum Berbasis Data</option><option>Demonstrasi Konsep Interaktif</option><option>Investigasi / Inquiry Lab</option></select></label>
-                <label>Tingkat Simulasi<select name="labComplexity"><option>Sederhana — 1–2 variabel</option><option selected>Menengah — 2–4 variabel</option><option>Lanjut — multi-variabel</option></select></label>
-                <label class="span2">Fenomena / Eksperimen yang Disimulasikan *<textarea name="labExperiment" rows="3" placeholder="Contoh: Pengaruh intensitas cahaya terhadap laju fotosintesis"></textarea></label>
-                <label class="span2">Alat dan Bahan Virtual<textarea name="labTools" rows="3" placeholder="Contoh: sumber cahaya, tanaman air, gelas ukur, stopwatch virtual, sensor gelembung"></textarea></label>
-                <label>Variabel Bebas<input name="independentVar" placeholder="Contoh: intensitas cahaya"></label>
-                <label>Variabel Terikat<input name="dependentVar" placeholder="Contoh: jumlah gelembung per menit"></label>
-                <label class="span2">Variabel Kontrol<textarea name="controlVars" rows="2" placeholder="Contoh: suhu, jenis tanaman, volume air"></textarea></label>
-                <label class="span2">Prosedur / Langkah Praktikum<textarea name="labProcedure" rows="5" placeholder="Tuliskan langkah umum, atau biarkan generator menyusun berdasarkan eksperimen."></textarea></label>
+                <label>Jenis Lab Maya
+                  <select name="labType">
+                    <option selected>Otomatis — pilih yang paling sesuai</option>
+                    <option>Eksperimen Virtual Interaktif</option>
+                    <option>Simulasi Sains</option>
+                    <option>Observasi / Investigasi Virtual</option>
+                    <option>Demonstrasi Konsep Interaktif</option>
+                  </select>
+                </label>
+                <label>Tingkat Simulasi
+                  <select name="labComplexity">
+                    <option selected>Otomatis sesuai kelas dan materi</option>
+                    <option>Sederhana — 1–2 variabel</option>
+                    <option>Menengah — 2–4 variabel</option>
+                    <option>Lanjut — multi-variabel</option>
+                  </select>
+                </label>
+                <label class="span2">Fenomena / Eksperimen yang Ingin Dibuat *<textarea name="labExperiment" rows="3" placeholder="Contoh: Mengamati perubahan tekanan hidrostatis pada berbagai kedalaman air."></textarea></label>
+                <label class="span2">Apa yang ingin murid ubah atau amati? <textarea name="labFocus" rows="2" placeholder="Opsional. Contoh: murid mengubah kedalaman dan jenis cairan, lalu mengamati perubahan tekanan. Boleh dikosongkan agar GEMA menentukannya."></textarea></label>
               </div>
-              <p class="mini-label">Komponen Lab Maya</p>
-              <div class="chips" data-check-group="labFeatures">
-                <label><input type="checkbox" value="Kontrol variabel dengan slider/input" checked><span>Kontrol Variabel</span></label>
-                <label><input type="checkbox" value="Tombol mulai, jeda, reset eksperimen" checked><span>Start / Pause / Reset</span></label>
-                <label><input type="checkbox" value="Tabel data hasil pengamatan" checked><span>Tabel Data</span></label>
-                <label><input type="checkbox" value="Grafik hasil eksperimen" checked><span>Grafik</span></label>
-                <label><input type="checkbox" value="Prediksi sebelum eksperimen"><span>Prediksi</span></label>
-                <label><input type="checkbox" value="Pertanyaan analisis" checked><span>Analisis</span></label>
-                <label><input type="checkbox" value="Kesimpulan dan refleksi" checked><span>Refleksi</span></label>
-                <label><input type="checkbox" value="Petunjuk keselamatan / batasan simulasi" checked><span>Keselamatan</span></label>
-                <label><input type="checkbox" value="Ekspor/unduh data sebagai CSV sederhana"><span>Ekspor Data</span></label>
+
+              <div class="lab-auto-note">
+                <strong>✨ Otomatis oleh GEMA</strong>
+                <span>Alat & bahan virtual • variabel • langkah praktikum • tabel/grafik • analisis • refleksi • keselamatan • tombol reset</span>
               </div>
-              <div class="fields top-gap">
-                <label>Jumlah Percobaan / Skenario<select name="labTrials"><option>1 skenario</option><option selected>3 skenario</option><option>5 skenario</option><option>Otomatis sesuai materi</option></select></label>
-                <label>Output Data Utama<select name="labOutput"><option>Tabel data</option><option selected>Tabel + grafik</option><option>Grafik + interpretasi</option><option>Data observasi kualitatif</option></select></label>
-                <label class="span2">Catatan Keselamatan / Batasan Konsep<textarea name="labSafety" rows="3" placeholder="Contoh: tekankan bahwa simulasi menyederhanakan kondisi nyata; sertakan peringatan jika eksperimen nyata memiliki risiko."></textarea></label>
-              </div>
+
+              <details class="advanced-box">
+                <summary>⚙️ Pengaturan lanjutan (opsional)</summary>
+                <p class="advanced-help">Isi hanya jika Bapak/Ibu ingin mengatur detail tertentu. Jika kosong, GEMA akan menentukannya berdasarkan materi dan tujuan pembelajaran.</p>
+                <div class="fields">
+                  <label class="span2">Alat dan Bahan Virtual<textarea name="labTools" rows="2" placeholder="Opsional"></textarea></label>
+                  <label>Variabel yang Diubah<input name="independentVar" placeholder="Opsional"></label>
+                  <label>Hasil yang Diamati<input name="dependentVar" placeholder="Opsional"></label>
+                  <label class="span2">Variabel yang Dijaga Tetap<textarea name="controlVars" rows="2" placeholder="Opsional"></textarea></label>
+                  <label class="span2">Prosedur Khusus<textarea name="labProcedure" rows="3" placeholder="Opsional — biarkan kosong agar GEMA menyusun langkah praktikum."></textarea></label>
+                  <label>Jumlah Percobaan
+                    <select name="labTrials">
+                      <option>1 skenario</option>
+                      <option selected>3 skenario</option>
+                      <option>5 skenario</option>
+                      <option>Otomatis sesuai materi</option>
+                    </select>
+                  </label>
+                  <label>Output Data
+                    <select name="labOutput">
+                      <option selected>Otomatis sesuai eksperimen</option>
+                      <option>Tabel data</option>
+                      <option>Tabel + grafik</option>
+                      <option>Grafik + interpretasi</option>
+                      <option>Observasi kualitatif</option>
+                    </select>
+                  </label>
+                  <label class="span2">Catatan Keselamatan / Batasan<textarea name="labSafety" rows="2" placeholder="Opsional — GEMA tetap akan menambahkan batasan simulasi dan keselamatan yang relevan."></textarea></label>
+                </div>
+              </details>
             </section>
 
             <section class="form-block game-only hidden">
@@ -123,8 +152,55 @@
               <div class="chips" data-check-group="gameFeatures"><label><input type="checkbox" value="Skor" checked><span>Skor</span></label><label><input type="checkbox" value="Timer"><span>Timer</span></label><label><input type="checkbox" value="3 nyawa"><span>Nyawa</span></label><label><input type="checkbox" value="Progress bar" checked><span>Progress</span></label><label><input type="checkbox" value="Badge / reward" checked><span>Reward</span></label><label><input type="checkbox" value="Combo / streak"><span>Combo</span></label><label><input type="checkbox" value="Feedback benar-salah" checked><span>Feedback</span></label><label><input type="checkbox" value="Layar hasil akhir" checked><span>Hasil Akhir</span></label><label><input type="checkbox" value="Tombol main lagi" checked><span>Main Lagi</span></label></div>
             </section>
 
+
+            <section class="form-block" id="integrationBlock">
+              <div class="block-title"><span>3</span><div><h3>📤 Hasil & Integrasi</h3><p>Pilih apa yang terjadi setelah murid menyelesaikan aktivitas. Bagian ini opsional.</p></div></div>
+              <div class="fields">
+                <label class="span2">Pengelolaan Hasil
+                  <select name="resultIntegration" id="resultIntegration">
+                    <option value="screen" selected>Hanya tampilkan hasil di layar</option>
+                    <option value="download">Tampilkan + unduh ringkasan hasil</option>
+                    <option value="whatsapp">Tampilkan + kirim ringkasan ke WhatsApp</option>
+                    <option value="sheet">Simpan ke Google Spreadsheet</option>
+                    <option value="sheet_whatsapp">Simpan ke Google Spreadsheet + kirim ringkasan ke WhatsApp</option>
+                  </select>
+                </label>
+              </div>
+
+              <p class="mini-label">Data hasil yang ingin dicatat</p>
+              <div class="chips" data-check-group="resultFields">
+                <label><input type="checkbox" value="Nama murid" checked><span>Nama</span></label>
+                <label><input type="checkbox" value="Kelas" checked><span>Kelas</span></label>
+                <label><input type="checkbox" value="Nomor absen"><span>No. Absen</span></label>
+                <label><input type="checkbox" value="Skor / hasil akhir" checked><span>Skor/Hasil</span></label>
+                <label><input type="checkbox" value="Progress / level"><span>Progress</span></label>
+                <label><input type="checkbox" value="Jawaban / hasil aktivitas"><span>Jawaban</span></label>
+                <label><input type="checkbox" value="Waktu pengerjaan"><span>Waktu</span></label>
+                <label><input type="checkbox" value="Data eksperimen / pengamatan"><span>Data Eksperimen</span></label>
+                <label><input type="checkbox" value="Kesimpulan / refleksi" checked><span>Refleksi</span></label>
+              </div>
+
+              <div class="integration-settings hidden" id="whatsappSettings">
+                <label>Nomor WhatsApp Penerima
+                  <input name="waNumber" inputmode="numeric" placeholder="Contoh: 6281234567890">
+                  <small>Gunakan format 62 tanpa tanda +. WhatsApp tidak mengirim otomatis; pengguna tetap menekan tombol Kirim.</small>
+                </label>
+              </div>
+
+              <div class="integration-settings hidden" id="sheetSettings">
+                <label>URL Google Apps Script Web App
+                  <input name="scriptUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec">
+                  <small>Boleh dikosongkan saat membuat prompt. Media tetap harus menyediakan satu variabel konfigurasi agar URL dapat ditempel kemudian.</small>
+                </label>
+              </div>
+
+              <div class="privacy-note">
+                🔒 <strong>Privasi murid:</strong> kumpulkan hanya data yang diperlukan untuk pembelajaran. Hindari NISN, alamat, nomor pribadi murid, atau data sensitif lainnya.
+              </div>
+            </section>
+
             <section class="form-block">
-              <div class="block-title"><span>3</span><div><h3>Tampilan & Teknis</h3><p>Tentukan karakter visual dan target perangkat.</p></div></div>
+              <div class="block-title"><span>4</span><div><h3>Tampilan & Teknis</h3><p>Tentukan karakter visual dan target perangkat.</p></div></div>
               <div class="fields">
                 <label>Gaya Visual<select name="style"><option>3D Edu-Tech Soft Purple</option><option>Modern Education</option><option>Gamified Futuristic</option><option>Doodle Education</option><option>Colorful Classroom</option><option>Islamic Modern</option><option>Minimalist Clean</option><option>Arcade Neon</option><option>Nature Learning</option></select></label>
                 <label>Target Perangkat<select name="device"><option selected>Responsive: HP, Tablet, dan Laptop</option><option>Prioritas HP / Mobile</option><option>Prioritas Laptop / Desktop</option></select></label>
@@ -150,6 +226,10 @@
 
 <a href="../galeri/index.html" title="Galeri Karya GEMA"
 style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#6d4bd1;color:white;text-decoration:none;padding:12px 15px;border-radius:999px;font-family:system-ui,sans-serif;font-weight:800;box-shadow:0 10px 28px rgba(64,44,120,.25)">🖼️ Galeri Karya</a>
+
+
+<a href="../kritik-saran/index.html" title="Kritik & Saran GEMA"
+style="position:fixed;left:18px;bottom:18px;z-index:9998;background:#fff;color:#6d4bd1;text-decoration:none;padding:12px 15px;border-radius:999px;font-family:system-ui,sans-serif;font-weight:800;border:1px solid #e7e0f7;box-shadow:0 10px 28px rgba(64,44,120,.18)">💬 Kritik & Saran</a>
 
 </body>
 </html>

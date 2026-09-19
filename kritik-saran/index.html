@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6d4bd1">
+<title>Kritik & Saran • GEMA</title>
+<meta name="description" content="Kirim kritik, saran, dan pengalaman penggunaan GEMA.">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../galeri/config.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">
+      <img src="../visual/images/logo-guruupgradeid.png" alt="Logo Guru Upgrade ID">
+      <div><strong>GEMA</strong><small>Kritik & Saran</small></div>
+    </a>
+    <a class="ghost" href="../index.html">← Beranda GEMA</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">SUARA PENGGUNA GEMA</span>
+      <h1>Bantu GEMA<br><span>terus berkembang.</span></h1>
+      <p>Kritik dan saran Bapak/Ibu membantu kami memperbaiki generator, tampilan, fitur, dan pengalaman penggunaan GEMA.</p>
+      <p class="privacy">🔒 Masukan tidak ditampilkan di galeri publik. Nama dan kontak bersifat opsional.</p>
+    </div>
+
+    <div class="visual-card" aria-hidden="true">
+      <div class="bubble">💡</div>
+      <div class="bubble small">💬</div>
+      <div class="bubble medium">⭐</div>
+      <strong>Belajar • Berbagi • Berkarya • Menginspirasi</strong>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="container">
+    <form id="feedbackForm" class="feedback-card">
+      <div class="form-head">
+        <span class="badge soft">FORM KRITIK & SARAN</span>
+        <h2>Ceritakan pengalaman Anda</h2>
+        <p>Form dibuat singkat agar mudah diisi setelah menggunakan GEMA.</p>
+      </div>
+
+      <div class="fields">
+        <label>Nama <span>(opsional)</span>
+          <input name="name" maxlength="80" placeholder="Boleh dikosongkan">
+        </label>
+
+        <label>Peran
+          <select name="role" required>
+            <option value="">Pilih peran</option>
+            <option>Guru</option>
+            <option>Kepala Sekolah</option>
+            <option>Pengawas</option>
+            <option>Mahasiswa</option>
+            <option>Dosen</option>
+            <option>Tenaga Kependidikan</option>
+            <option>Lainnya</option>
+          </select>
+        </label>
+
+        <label>Instansi / Sekolah <span>(opsional)</span>
+          <input name="institution" maxlength="120" placeholder="Nama sekolah/instansi">
+        </label>
+
+        <label>Fitur yang digunakan
+          <select name="feature" required>
+            <option value="">Pilih fitur</option>
+            <option>Generator Visual Edukatif</option>
+            <option>Generator Media Interaktif</option>
+            <option>Generator Game Edukatif</option>
+            <option>Generator Lab Maya</option>
+            <option>Galeri Karya</option>
+            <option>Keseluruhan GEMA</option>
+          </select>
+        </label>
+
+        <label class="span2">Bagaimana pengalaman menggunakan GEMA?
+          <div class="rating" role="radiogroup" aria-label="Penilaian pengalaman">
+            <label><input type="radio" name="rating" value="1" required><span>1<br><small>Kurang</small></span></label>
+            <label><input type="radio" name="rating" value="2"><span>2</span></label>
+            <label><input type="radio" name="rating" value="3"><span>3<br><small>Cukup</small></span></label>
+            <label><input type="radio" name="rating" value="4"><span>4</span></label>
+            <label><input type="radio" name="rating" value="5"><span>5<br><small>Sangat Baik</small></span></label>
+          </div>
+        </label>
+
+        <label class="span2">Apa yang sudah baik? <span>(opsional)</span>
+          <textarea name="positive" maxlength="500" rows="3" placeholder="Contoh: form mudah dipahami, prompt lengkap, hasil media menarik..."></textarea>
+        </label>
+
+        <label class="span2">Kritik / kendala yang ditemukan <span>(opsional)</span>
+          <textarea name="criticism" maxlength="700" rows="4" placeholder="Ceritakan bagian yang membingungkan, tidak berfungsi, terlalu panjang, atau perlu diperbaiki..."></textarea>
+        </label>
+
+        <label class="span2">Saran pengembangan *
+          <textarea name="suggestion" maxlength="700" rows="4" required placeholder="Fitur atau perbaikan apa yang Bapak/Ibu harapkan?"></textarea>
+        </label>
+
+        <label class="span2">Email / WhatsApp <span>(opsional)</span>
+          <input name="contact" maxlength="120" placeholder="Isi hanya jika bersedia dihubungi terkait masukan ini">
+        </label>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Saya memahami bahwa masukan ini digunakan untuk pengembangan GEMA dan tidak akan ditampilkan sebagai konten publik.</span>
+      </label>
+
+      <div class="actions">
+        <button type="reset" class="ghost">Reset</button>
+        <button type="submit" class="primary" id="submitBtn">Kirim Kritik & Saran</button>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+      <div id="connectionStatus" class="connection"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div><strong>GEMA</strong> — Generator Media dan Aktivitas Edukatif</div>
+    <div>“Dari Ide Menjadi Media.”</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
