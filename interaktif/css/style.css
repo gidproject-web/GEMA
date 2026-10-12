@@ -19,3 +19,10 @@
 .integration-settings label{display:flex;flex-direction:column;gap:7px;font-weight:700}
 .integration-settings small{font-weight:500;color:#786f88;line-height:1.45}
 .privacy-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:#f7f7fb;border:1px solid #e8e6ef;color:#625d70;font-size:13px;line-height:1.5}
+
+.ai-launch{margin:16px 0;padding:14px;border-radius:14px;border:1px solid rgba(146,115,228,.3);background:rgba(117,90,218,.07)}.summary .ai-launch{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2)}.ai-launch>b{display:block;margin-bottom:10px}.ai-launch small{display:block;opacity:.8;margin-top:9px}.ai-links{display:flex;flex-wrap:wrap;gap:8px}.ai-links a{display:inline-flex;text-decoration:none;color:#6546ba;background:#f1ecff;border:1px solid #ded3ff;padding:9px 12px;font-size:.87rem;font-weight:800;border-radius:11px}.ai-links a:hover,.ai-links a:focus-visible{background:#dcd1ff;outline:2px solid #9e8bed}.integration-settings{padding:14px 16px;margin:14px 0;border:1px solid #e7def8;border-radius:12px;background:#f9f6ff}.privacy-note{margin-top:14px}.game-choice:focus-within>span{outline:2px solid #7c57ce;outline-offset:2px}
+
+.repair-panel{margin-top:20px;padding:17px;background:#f8f6ff;border:1px solid #e5dcfa;border-radius:16px}.repair-panel h3{margin:0 0 6px}.repair-panel p{font-size:.9rem;color:#655f75}.repair-panel button{margin:5px 7px 4px 0}.repair-panel #helperStatus{color:#176a45;font-weight:700}
+
+/* GEMA v5: panel pemain ringkas */
+.game-participation{background:#f8f6ff;border:1px solid #e6e0f7;border-radius:18px;padding:18px}.game-participation .block-title{margin-bottom:12px}.game-participation .block-title>span{font-size:1rem}.game-participation .privacy-note{margin-top:14px}

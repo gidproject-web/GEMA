@@ -15,3 +15,22 @@ input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);
 .check{display:flex;gap:10px;margin:18px 0;color:var(--muted);font-size:13px;line-height:1.5}.check input{width:auto;margin-top:3px}.actions{display:flex;justify-content:flex-end;gap:10px}.message{text-align:right;margin-top:12px;font-size:13px;font-weight:750}.message.ok{color:var(--green)}.message.err{color:var(--red)}.connection{text-align:right;color:var(--muted);font-size:12px;margin-top:5px}
 footer{border-top:1px solid var(--line);background:white;padding:26px 0}.foot{display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:13px}
 @media(max-width:720px){.hero-grid{grid-template-columns:1fr}.visual-card{display:none}.fields{grid-template-columns:1fr}.span2{grid-column:auto}.rating{grid-template-columns:repeat(5,1fr)}.foot{flex-direction:column}.brand small{display:none}}
+
+/* GEMA v4: formulir satu kolom yang ringkas */
+.container{width:min(680px,calc(100% - 32px))}
+.compact-intro{text-align:center;padding:36px 0 12px}
+.compact-intro h1{font-size:clamp(30px,5vw,46px);margin:10px 0 8px;line-height:1.12}
+.compact-intro p{color:var(--muted);line-height:1.55;margin:0 auto;max-width:540px;font-size:14px}
+.form-section{padding:14px 0 45px}.feedback-card{padding:clamp(18px,4vw,30px)}
+.fields{display:grid;grid-template-columns:1fr;gap:14px}.span2{grid-column:1}
+.rating-field{border:0;padding:0;margin:0;min-width:0}
+.rating-field legend{font-size:13px;font-weight:800;margin-bottom:8px}
+.rating span{min-height:48px;font-size:23px;color:#b3adbf;display:flex;gap:5px;align-items:center;justify-content:center}
+.rating span small{font-size:13px}.rating input:checked+span{color:#b77d0d;background:#fff6d8;border-color:#d7ab42}
+.rating input:focus-visible+span{outline:3px solid var(--purple);outline-offset:2px}
+.extra-fields{border:1px dashed var(--line);border-radius:13px;padding:12px 14px}
+.extra-fields summary{cursor:pointer;font-size:13px;font-weight:800;color:var(--purple)}
+.extra-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:14px}
+.check{margin:15px 0}.actions .primary{width:100%;font-size:15px;padding:14px}
+.message,.connection{text-align:center}.privacy-bottom{text-align:center;color:var(--muted);font-size:12px;margin:10px 0 0}
+@media(max-width:580px){.compact-intro{padding-top:25px}.extra-grid{grid-template-columns:1fr}.rating{gap:5px}.rating span{font-size:20px}}

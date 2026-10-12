@@ -36,7 +36,7 @@ function safeHttpUrl(value){
   }catch(e){ return ""; }
 }
 function fallbackIcon(cat){
-  return {"Visual Edukatif":"🎨","Media Interaktif":"🖥️","Game Edukatif":"🎮","Lab Maya":"🧪"}[cat] || "✨";
+  return {"Visual Edukatif":"🎨","Media Interaktif":"🖥️","Game Edukatif":"🎮","Lab Maya":"🧪","AR & Motion Gesture":"🖐️"}[cat] || "✨";
 }
 function fmtDate(v){
   try{return new Intl.DateTimeFormat("id-ID",{day:"numeric",month:"short",year:"numeric"}).format(new Date(v))}

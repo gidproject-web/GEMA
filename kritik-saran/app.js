@@ -23,6 +23,17 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const fd = new FormData(form);
   const payload = Object.fromEntries(fd.entries());
+  const messageText = (payload.messageText || "").trim();
+  if (messageText.length < 5) { msg.className = "message err"; msg.textContent = "Tuliskan pesan minimal 5 karakter."; return; }
+  // Pertahankan kolom tabel Supabase lama agar tidak memerlukan migrasi database.
+  const category = payload.feedbackType || "Saran pengembangan";
+  const dbPayload = {
+    name: payload.name || null, role: "Pengunjung", institution: null,
+    feature: payload.feature || "Keseluruhan GEMA", rating: Number(payload.rating),
+    positive: category === "Apresiasi" ? messageText : null,
+    criticism: category === "Kritik penggunaan" || category === "Laporan kendala / bug" ? messageText : null,
+    suggestion: `[${category}] ${messageText}`, contact: payload.contact || null
+  };
 
   btn.disabled = true;
   btn.textContent = "Mengirim...";
@@ -32,7 +43,7 @@ form.addEventListener("submit", async (e) => {
   if (!client) {
     try {
       const existing = JSON.parse(localStorage.getItem("gema_feedback_demo") || "[]");
-      existing.push({...payload, created_at:new Date().toISOString()});
+      existing.push({...dbPayload, created_at:new Date().toISOString()});
       localStorage.setItem("gema_feedback_demo", JSON.stringify(existing));
       msg.className = "message ok";
       msg.textContent = "Tersimpan dalam mode demo di browser ini. Hubungkan Supabase agar masuk ke database admin.";
@@ -42,17 +53,7 @@ form.addEventListener("submit", async (e) => {
       msg.textContent = "Masukan belum dapat disimpan.";
     }
   } else {
-    const { error } = await client.from("gema_feedback").insert({
-      name: payload.name || null,
-      role: payload.role,
-      institution: payload.institution || null,
-      feature: payload.feature,
-      rating: Number(payload.rating),
-      positive: payload.positive || null,
-      criticism: payload.criticism || null,
-      suggestion: payload.suggestion,
-      contact: payload.contact || null
-    });
+    const { error } = await client.from("gema_feedback").insert(dbPayload);
 
     if (error) {
       console.error(error);

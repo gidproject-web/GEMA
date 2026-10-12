@@ -28,3 +28,5 @@
 
 @media(max-width:900px){.examples-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.examples-grid{grid-template-columns:1fr;gap:16px}.example-media{aspect-ratio:16/9}.example-body{padding:17px 18px 19px}}
+
+.gema-ai-links{margin:18px 0;padding:16px;background:#f5f0ff;border:1px solid #e0d4ff;border-radius:15px;display:flex;align-items:center;flex-wrap:wrap;gap:10px}.gema-ai-links strong{width:100%;color:#563b95}.gema-ai-links a{padding:9px 15px;border-radius:11px;background:#7356d8;color:white!important;text-decoration:none;font-weight:800;font-size:.9rem}.gema-ai-links a:hover{background:#5534b0}.gema-ai-links small{width:100%;opacity:.8}
