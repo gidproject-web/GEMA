@@ -1,3 +1,4 @@
+<!-- GEMA GAME DROPDOWN v17.1: pastikan source GitHub Pages menggunakan versi ini. -->
 <!DOCTYPE html>
 
 <html lang="id">
@@ -6,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#7657d6" name="theme-color"/>
 <title>GEMA • Media Interaktif &amp; Game Edukatif</title>
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=17-1" rel="stylesheet"/>
 <style>
 .gema-category-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:16px auto 25px;padding:12px;background:#f0edff;border:1px solid #dad3f4;border-radius:16px;max-width:1150px}.gema-category-nav a{display:inline-block;text-decoration:none;padding:10px 14px;border-radius:11px;background:#fff;color:#3d286a;font-size:14px;font-weight:750;border:1px solid #e1dcf2}.gema-category-nav a[aria-current="page"]{background:#6244b9;color:#fff}.gema-category-nav a:hover{border-color:#7655d2;transform:translateY(-1px)}@media(max-width:600px){.gema-category-nav{gap:6px;padding:9px}.gema-category-nav a{flex:1 1 125px;text-align:center;font-size:12px;padding:10px 6px}}
 </style><link href="../shared/gema-polish.css" rel="stylesheet"/></head>
@@ -129,30 +130,51 @@
 </section>
 <section class="form-block game-only hidden">
 <div class="block-title"><span>2</span><div><h3>Pilih Jenis Game</h3><p>Mekanik game akan dimasukkan otomatis ke prompt.</p></div></div>
-<div class="game-grid" id="gameGrid">
-<label class="game-choice"><input checked="" name="gameType" type="radio" value="Quiz Battle"/><span>🏆<b>Quiz Battle</b><small>Pilih jawaban, skor, combo dan ranking lokal.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Memory Card"/><span>🧠<b>Memory Card</b><small>Buka kartu dan cari pasangan yang sesuai.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Matching Game"/><span>🔗<b>Matching</b><small>Pasangkan istilah, gambar, definisi atau konsep.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Drag and Drop Challenge"/><span>🖐️<b>Drag &amp; Drop</b><small>Seret objek ke kategori atau target yang benar.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Escape Room Edukasi"/><span>🔐<b>Escape Room</b><small>Pecahkan petunjuk untuk membuka tahap berikutnya.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Adventure / Mission Game"/><span>🗺️<b>Adventure</b><small>Misi dan level berbasis perjalanan belajar.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Treasure Hunt"/><span>💎<b>Treasure Hunt</b><small>Cari petunjuk dan kumpulkan reward.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Spin Wheel Quiz"/><span>🎡<b>Spin Wheel</b><small>Putar roda untuk menentukan soal/tantangan.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Maze Challenge"/><span>🧩<b>Maze Challenge</b><small>Pilih jalur berdasarkan jawaban yang benar.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Tebak Gambar"/><span>🖼️<b>Tebak Gambar</b><small>Kenali objek/konsep dari petunjuk visual.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="True or False Challenge"/><span>✅<b>True / False</b><small>Keputusan cepat dengan feedback langsung.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Puzzle Edukatif"/><span>🧩<b>Puzzle</b><small>Susun urutan, konsep, gambar, atau informasi.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Millionaire Quiz Show"/><span>💰<b>Millionaire Quiz Show</b><small>Kuis bertingkat, empat pilihan jawaban, bantuan 50:50 dan penonton.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Platformer Klasik"/><span>🍄<b>Platformer Klasik</b><small>Lari, melompat, koin ilmu dan tantangan ala game platform klasik.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Endless Runner"/><span>🏃<b>Endless Runner</b><small>Hindari rintangan, kumpulkan poin, selesaikan soal.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Tower Defense Edukasi"/><span>🏰<b>Tower Defense</b><small>Jawaban benar mengaktifkan pertahanan dan strategi.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Wordle Edukasi"/><span>🔤<b>Tebak Kata 5 Huruf</b><small>Petunjuk huruf dan kosakata sesuai materi.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Jeopardy Quiz Board"/><span>🎯<b>Jeopardy Board</b><small>Pilih kategori dan nominal poin untuk menjawab soal.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Rhythm Challenge"/><span>🎵<b>Rhythm Challenge</b><small>Ikuti irama dan kuis ketepatan waktu.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Tarik Tambang Edukatif"/><span>🪢<b>Tarik Tambang</b><small>Dua tim menarik tali lewat ritme aksi dan tantangan konsep.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Panjat Pinang Edukatif"/><span>🌴<b>Panjat Pinang</b><small>Naik bertahap, kelola tenaga, kumpulkan bendera ilmu.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Balap Karung Edukatif"/><span>🏁<b>Balap Karung</b><small>Lompat berirama, hindari rintangan, capai garis finis.</small></span></label>
-<label class="game-choice"><input name="gameType" type="radio" value="Estafet Pengetahuan"/><span>🏃<b>Estafet Pengetahuan</b><small>Oper tongkat melalui beberapa pos dan tantangan berbeda.</small></span></label>
+<div class="game-selector"><label for="gameTypeSelect">Jenis permainan
+<select id="gameTypeSelect" name="gameType" aria-describedby="gameTypeHelp">
+<optgroup label="Kuis &amp; Pengetahuan">
+<option value="Quiz Battle" selected>🏆 Quiz Battle</option>
+<option value="Millionaire Quiz Show" >💰 Millionaire Quiz Show</option>
+<option value="Jeopardy Quiz Board" >🎯 Jeopardy Board</option>
+<option value="True or False Challenge" >✅ True / False</option>
+<option value="Tebak Gambar" >🖼️ Tebak Gambar</option>
+<option value="Wordle Edukasi" >🔤 Tebak Kata 5 Huruf</option>
+<option value="Spin Wheel Quiz" >🎡 Spin Wheel</option>
+</optgroup>
+<optgroup label="Puzzle &amp; Strategi">
+<option value="Memory Card" >🧠 Memory Card</option>
+<option value="Matching Game" >🔗 Matching</option>
+<option value="Drag and Drop Challenge" >🖐️ Drag &amp; Drop</option>
+<option value="Escape Room Edukasi" >🔐 Escape Room</option>
+<option value="Maze Challenge" >🧩 Maze Challenge</option>
+<option value="Puzzle Edukatif" >🧩 Puzzle</option>
+<option value="Tower Defense Edukasi" >🏰 Tower Defense</option>
+</optgroup>
+<optgroup label="Petualangan &amp; Aksi">
+<option value="Adventure / Mission Game" >🗺️ Adventure</option>
+<option value="Treasure Hunt" >💎 Treasure Hunt</option>
+<option value="Platformer Klasik" >🍄 Platformer Klasik</option>
+<option value="Endless Runner" >🏃 Endless Runner</option>
+<option value="Rhythm Challenge" >🎵 Rhythm Challenge</option>
+</optgroup>
+<optgroup label="Permainan Tradisional">
+<option value="Tarik Tambang Edukatif" >🪢 Tarik Tambang</option>
+<option value="Panjat Pinang Edukatif" >🌴 Panjat Pinang</option>
+<option value="Balap Karung Edukatif" >🏁 Balap Karung</option>
+<option value="Estafet Pengetahuan" >🏃 Estafet Pengetahuan</option>
+</optgroup>
+<optgroup label="Game Modern Tambahan">
+<option value="Space Plane Adventure" >🚀 Pesawat luar angkasa</option>
+<option value="Voxel World Adventure 3D" >🧱 Voxel World 3D</option>
+<option value="Adventure Learning Map" >🗺️ Peta Petualangan</option>
+<option value="Kart Racing Edukatif" >🏎️ Balap Kart</option>
+<option value="Cooking &amp; Cafe Challenge" >🍳 Cooking Challenge</option>
+<option value="Pet Simulator Edukatif" >🐾 Pet Simulator</option>
+<option value="Champions Brain Arena">🧠 Champions Brain Arena</option>
+<option value="Battle Arena Edukatif" >⚔️ Arena Strategi</option>
+</optgroup>
+</select></label>
+<div id="gameTypeHelp" class="game-hint" aria-live="polite"><strong id="gameTypeTitle">🏆 Quiz Battle</strong><p id="gameTypeDescription">Pilih jawaban, skor, combo dan ranking lokal.</p></div>
 </div>
 <div class="fields top-gap"><label>Jumlah Level<select name="levels"><option>1 level</option><option>3 level</option><option selected="">5 level</option><option>7 level</option><option>Otomatis</option></select></label><label>Jumlah Soal / Tantangan<select name="questions"><option>5</option><option selected="">10</option><option>15</option><option>20</option><option>Otomatis sesuai level</option></select></label></div>
 <div class="game-participation top-gap" id="gameParticipation">
@@ -261,7 +283,7 @@
 </section>
 </main><footer aria-label="Footer Guru Upgrade ID" class="gema-footer"><div class="gema-footer-shell"><div class="gema-footer-head"><div><strong class="gema-footer-title">Guru Upgrade ID <span>• GEMA</span></strong><p class="gema-footer-tagline">Belajar • Berbagi • Berkarya • Menginspirasi</p></div><a class="gema-footer-home" href="../index.html">Kembali ke Beranda ↗</a></div><div aria-label="Media sosial Guru Upgrade ID" class="gema-footer-social"><a href="https://www.facebook.com/search/top?q=Ika%20Lathifah" rel="noopener noreferrer" target="_blank"><b>Facebook</b><small>Ika Lathifah</small></a><a href="https://www.instagram.com/guruupgradeid/" rel="noopener noreferrer" target="_blank"><b>Instagram</b><small>@guruupgradeid</small></a><a href="https://www.tiktok.com/@guruupgradeid" rel="noopener noreferrer" target="_blank"><b>TikTok</b><small>guruupgradeid</small></a><a href="https://www.youtube.com/@guruupgradeid" rel="noopener noreferrer" target="_blank"><b>YouTube</b><small>@guruupgradeid</small></a><a href="https://blog.guruupgradeid.com/" rel="noopener noreferrer" target="_blank"><b>Blog</b><small>blog.guruupgradeid.com</small></a></div><div class="gema-footer-bottom"><span>© 2026 @guruupgradeid. All rights reserved.</span><span>Generator Media dan Aktivitas Edukatif</span></div></div></footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=17-1"></script>
 <a href="../galeri/index.html" style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#6d4bd1;color:white;text-decoration:none;padding:12px 15px;border-radius:999px;font-family:system-ui,sans-serif;font-weight:800;box-shadow:0 10px 28px rgba(64,44,120,.25)" title="Galeri Karya GEMA">🖼️ Galeri Karya</a>
 <a href="../kritik-saran/index.html" style="position:fixed;left:18px;bottom:18px;z-index:9998;background:#fff;color:#6d4bd1;text-decoration:none;padding:12px 15px;border-radius:999px;font-family:system-ui,sans-serif;font-weight:800;border:1px solid #e7e0f7;box-shadow:0 10px 28px rgba(64,44,120,.18)" title="Kritik &amp; Saran GEMA">💬 Kritik &amp; Saran</a>
 </body>
