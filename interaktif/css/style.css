@@ -26,3 +26,6 @@
 
 /* GEMA v5: panel pemain ringkas */
 .game-participation{background:#f8f6ff;border:1px solid #e6e0f7;border-radius:18px;padding:18px}.game-participation .block-title{margin-bottom:12px}.game-participation .block-title>span{font-size:1rem}.game-participation .privacy-note{margin-top:14px}
+
+/* Pemilih genre game ringkas */
+.game-selector{max-width:100%;display:grid;gap:10px}.game-selector>label{display:grid;gap:8px;font-weight:800}.game-selector select{font-size:1rem;background:#fff;min-height:52px}.game-hint{border:1px solid #e2d9fa;background:#f8f5ff;border-radius:14px;padding:14px 16px}.game-hint strong{color:#5135a7}.game-hint p{margin:6px 0 0;color:#5b5370;line-height:1.5}
